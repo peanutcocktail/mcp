@@ -1,11 +1,13 @@
 const path = require('path')
 module.exports = async (kernel) => {
   let root;
+  console.log("KERNEL>ENVS", kernel.envs)
   if (kernel.platform === "win32") {
     root = path.resolve(kernel.envs.HOME, 'Library/Application Support/Claude/claude_desktop_config.json')
   } else {
     root = path.resolve(kernel.envs.APPDATA, 'Claude/claude_desktop_config.json')
   }
+  console.log("2")
   return {
     run: [
       {
