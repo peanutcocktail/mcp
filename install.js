@@ -35,7 +35,7 @@ module.exports = {
             "sqlite": {
               "command": "uvx",
               "env": {
-                "HOME": "{{kernel.envs.HOME}}",
+//                "HOME": "{{kernel.envs.HOME}}",
                 "PATH": "{{kernel.envs.PATH}}",
               },
               "args": [
@@ -58,8 +58,8 @@ module.exports = {
             "sqlite": {
               "command": "uvx",
               "env": {
-                "HOME": "{{kernel.envs.HOME}}",
-                "PATH": "{{kernel.envs.PATH}}",
+//                "HOME": "{{kernel.envs.HOMEPATH}}",
+                "PATH": "{{kernel.envs.PATH || kernel.envs.Path}}",
               },
               "args": [
                 "mcp-server-sqlite",
