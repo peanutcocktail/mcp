@@ -76,7 +76,7 @@ module.exports = async (kernel) => {
                   "PATH": "{{kernel.envs.PATH}}",
                   "GITLAB_PERSONAL_ACCESS_TOKEN": "{{kernel.envs.GITLAB_PERSONAL_ACCESS_TOKEN}}",
                   "GITLAB_API_URL": "{{kernel.envs.GITLAB_API_URL}}"
-                }
+                },
                 "command": "npx",
                 "args": ["-y", "@modelcontextprotocol/server-gitlab"],
               },
